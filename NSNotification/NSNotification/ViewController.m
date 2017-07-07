@@ -50,6 +50,7 @@
 - (void)addSelfAsObserver
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mainQueueNotification:) name:kMainQueueNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mainQueueNotification:) name:kMainQueueNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(globalQueueNotification:) name:kGlobalQueueNotification object:nil];
 }
 
