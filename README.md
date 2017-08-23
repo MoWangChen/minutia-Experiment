@@ -16,3 +16,10 @@ iOS常用编程中所作一些测试
 	Q: layer切圆角一定会引起混合渲染?
 	A: 使用layer.cornerRadius属性设置圆角,会引起混合渲染.使用layer.mask属性设置则不会.
 	注: 测试时,使用UIButton做示例,发现title为英文时,titleLabel不会引起混合渲染.title为中文时,titleLabel部分依然会混合渲染.因为中文会多渲染出透明外边界,使用`button.titleLabel.layer.masksToBounds = YES`即可解决
+	
+	
+##dealloc在哪个线程执行
+
+	Q:对象的dealloc在哪个线程执行
+	A:在该对象的引用计数变为0的线程被调用
+
